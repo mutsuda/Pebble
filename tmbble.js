@@ -2,7 +2,7 @@ var parada = "0001"
 ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }, function(data){
   var info = data.match(/<td align="center">(.*?)<\/td>/g);
   simply.title('Parada ' + parada);
-  var output = info[3];
+  var output = "";
   //simply.body(clean(info[3]));
   for (var i = 0; i<info.length; i++)
   {
