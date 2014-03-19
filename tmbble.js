@@ -4,11 +4,11 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
   simply.title('Parada ' + parada);
   var output = info[3];
   //simply.body(clean(info[3]));
-  for (var i = 1; i<info.length; i++)
+  for (var i = 0; i<info.length; i++)
   {
     output = output + " " + info[i];
   }
-  simply.body(output.replace("<td align=\"center\">",''));
+  simply.body(output.replace("<td align=\"center\">",'').replace("</td>",""));
 });
 
 
