@@ -8,7 +8,7 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
   {
     output = output + " " + info[i];
   }
-  simply.body(output.replace("<td align=\"center\">",'').replace("</td>",'').replace("<b>",'').replace("</b>",''));
+  simply.body(output.replace(/<td align=\"center\">/g,'').replace("</td>",'').replace("<b>",'').replace("</b>",''));
 });
 
 
