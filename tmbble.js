@@ -4,6 +4,10 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
   simply.title('Parada ' + parada);
   var output = info[3];
   //simply.body(clean(info[3]));
+  for (var i = 1; i<info.length; i++)
+  {
+    output = info[i]  
+  }
   simply.body(clean(output));
 });
 
