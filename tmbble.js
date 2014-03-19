@@ -6,7 +6,7 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
   //simply.body(clean(info[3]));
   for (var i = 1; i<info.length; i++)
   {
-    output = output + " " + clean(info[i])
+    output = output + " " + clean(info[i]);
   }
   simply.body(output);
 });
