@@ -3,17 +3,17 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
   var info = data.match(/<td align="center">(.*?)<\/td>/g);
   simply.title('Parada ' + parada);
   var output = "";
-  //simply.body(clean(info[3]));
   for (var i = 2; i<info.length; i++)
   {
     output = output + " " + info[i];
     if (i%2!=0) output = output + "\n"
   }
-  simply.body(output.replace(/<td align=\"center\">/g,'').replace(/<\/td>/g,'').replace(/<b>/g,'').replace(/<\/b>/g,''));
+  //simply.body(output.replace(/<td align=\"center\">/g,'').replace(/<\/td>/g,'').replace(/<b>/g,'').replace(/<\/b>/g,''));
+  simply.body(clean(output));
 });
 
 
 function clean(text)
 {
-  return text.replace("<td align=\"center\">",'').replace("</td>",'')
+  return text.replace(/<td align=\"center\">/g,'').replace(/<\/td>/g,'').replace(/<b>/g,'').replace(/<\/b>/g,'');
 }
