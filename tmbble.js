@@ -8,7 +8,6 @@ ajax({ url: 'http://www.tmb.cat/piu/ca_ES/piuimodesolucio.jsp?parada='+ parada }
     output = output + " " + info[i];
     if (i%2!=0) output = output + "\n"
   }
-  //simply.body(output.replace(/<td align=\"center\">/g,'').replace(/<\/td>/g,'').replace(/<b>/g,'').replace(/<\/b>/g,''));
   simply.body(clean(output));
 });
 
